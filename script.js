@@ -23,7 +23,7 @@ function generatePassword () {
      alert('At least one special character type should be selected. Try it again!');
   }
 
-  // Characters Arrays
+  // Characters types arrays
   let lowerArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
   let upperArr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   let specialCharArr = ['*', '!','.', '?','/',',','@','$','%','&','=','#','+','-',';'];
@@ -31,7 +31,7 @@ function generatePassword () {
 
   let entireOpt = [];
 
-  // Check which options the users chose and push them into a new array
+  // Check which options the users chose and concat them into a new array
   if ( lowerOpt === true ){
     entireOpt = entireOpt.concat(lowerArr);
   }
@@ -48,11 +48,14 @@ function generatePassword () {
     entireOpt = entireOpt.concat(numbersArr);
   }
 
+  // Loop to give us a random number
+  let randomPass = '';
+
   for ( let s = 0; s < numOfCharacters; s++ ) {
     let randomNum = Math.floor(Math.random() * entireOpt.length);
-    let randomPass = entireOpt[randomNum];
-
+    randomPass += entireOpt[randomNum];   //randomPass = h + p;
   }
+  return randomPass;
 }
 
 
