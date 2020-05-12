@@ -51,11 +51,11 @@ function generatePassword () {
   // Loop to give us a random number
   let randomPass = '';
 
-  for ( let s = 0; s < numOfCharacters; s++ ) {
-    let randomNum = Math.floor(Math.random() * entireOpt.length);
-    randomPass += entireOpt[randomNum];   //randomPass = h + p;
-  }
-  return randomPass;
+  for ( let s = 0; s < numOfCharacters; s++ ) {  // Number of characters it's defined for user
+    let randomNum = Math.floor(Math.random() * entireOpt.length);  // EntireOpt length will be based on user-selected criteria
+    randomPass += entireOpt[randomNum];  // randomNum will search the index into entireOpt array
+  }                                      // randomPass will be saved in the variable above and it will concatenate the new value according to randomNum index
+  return randomPass;  // GeneratePassword function return the random password
 }
 
 
