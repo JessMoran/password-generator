@@ -14,7 +14,7 @@ function generatePassword () {
 
   // Get data to know which special characters do they want
   let lowerOpt = confirm('Would you like lowercase?');
-  let upperOpt = confirm('Would you like lowercase?');
+  let upperOpt = confirm('Would you like uppercase?');
   let specialCharOpt = confirm('Would you like special characters?');
   let numbersOpt = confirm('Would you like numbers?');
 
